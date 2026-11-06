@@ -885,14 +885,21 @@ function conectarEventos() {
     alSecundario: borrarHistorial,
   }));
 
-  // El panel de respuestas está oculto para el público. Se abre tocando 5 veces seguidas
-  // el aviso de datos del pie, o con Ctrl + Shift + E. Al recargar la página se vuelve a ocultar.
+  // El panel de respuestas está oculto para el público. Se abre (o se vuelve a ocultar) tocando
+  // 5 veces seguidas el aviso de datos del pie, o con Ctrl + Shift + E. También tiene un botón «Ocultar».
+  // Al recargar la página siempre empieza oculto.
   const panelDatos = $("#panel-datos");
   function abrirPanelDatos() {
+    if (!panelDatos.hidden) { ocultarPanelDatos(); return; }
     panelDatos.hidden = false;
     panelDatos.open = true;
     panelDatos.scrollIntoView({ behavior: "smooth", block: "center" });
   }
+  function ocultarPanelDatos() {
+    panelDatos.open = false;
+    panelDatos.hidden = true;
+  }
+  $("#btn-ocultar-panel").addEventListener("click", ocultarPanelDatos);
   let toquesAviso = 0;
   let relojAviso = null;
   $("#aviso-datos").addEventListener("click", () => {

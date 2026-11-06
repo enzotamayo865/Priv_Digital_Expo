@@ -37,7 +37,7 @@ Para cambiar una pregunta o una explicación, alcanza con editar `preguntas.js`.
 
 Cada respuesta se guarda de forma anónima en una planilla: la fecha, un código al azar de la partida, la pregunta, la opción elegida y si estaba bien. Para activarlo, pegá la dirección de la aplicación web de Apps Script en `URL_PLANILLA`, al principio de `registro.js`. El código que va en Apps Script está en el archivo `Codigo.gs`. Si no hay internet, las respuestas esperan en el navegador y se mandan solas cuando vuelve la conexión.
 
-Además, todas las respuestas quedan guardadas en el navegador de la compu donde se juega. Ese panel está oculto: se abre tocando 5 veces seguidas el aviso de datos del pie, o con Ctrl + Shift + E. Ahí está **Descargar Excel**, que baja un archivo con las mismas dos hojas que la planilla de Google («Partidas» y «Preguntas»), y **Borrar las guardadas**, que pide confirmar y espera 5 segundos. La carpeta se puede copiar a otra compu y abrir `index.html` con doble clic.
+Además, todas las respuestas quedan guardadas en el navegador de la compu donde se juega. Ese panel está oculto: se abre tocando 5 veces seguidas el aviso de datos del pie, o con Ctrl + Shift + E, y se vuelve a ocultar con el botón **Ocultar** (o repitiendo los toques o el atajo). Ahí está **Descargar Excel**, que baja un archivo con las mismas dos hojas que la planilla de Google («Partidas» y «Preguntas»), y **Borrar las guardadas**, que pide confirmar y espera 5 segundos. La carpeta se puede copiar a otra compu y abrir `index.html` con doble clic.
 
 ## Hecho con
 
